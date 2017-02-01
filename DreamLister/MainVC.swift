@@ -71,6 +71,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
+        controller.delegate = self
+        
         self.controller = controller
         
         do {
@@ -118,6 +120,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
                 break
         }
     }
+    
+    
     
     func generateTestData() {
         let item = Item(context: context)

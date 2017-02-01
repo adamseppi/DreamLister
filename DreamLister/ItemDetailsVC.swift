@@ -73,5 +73,27 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             //handle error
         }
     }
+    
+    @IBAction func savePressed(_ sender: UIButton) {
+        let newItem = Item(context: context)
+        if let title = titleField.text{
+            newItem.title = title
+        }
+        
+        if let price = priceField.text{
+            newItem.price = (price as NSString).doubleValue
+        }
+        
+        if let details = detailsField.text {
+            newItem.details = details
+        }
+        
+        newItem.toStore = stores[storePicker.selectedRow(inComponent: 0)]
+        
+        ad.saveContext()
+        
+        _ = navigationController?.popViewController(animated: true)
+        
+    }
 
 }

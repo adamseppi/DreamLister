@@ -184,6 +184,9 @@
                                 <state key="normal" title="Save Item">
                                     <color key="titleColor" red="0.93804086539999998" green="0.93804086539999998" blue="0.93804086539999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="savePressed:" destination="tvu-Lj-fkm" eventType="touchUpInside" id="cmA-e7-F5r"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pz-vR-kqz">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
